@@ -7,7 +7,8 @@ const MyPosts = (props) => {
     let postsElements =
         props.posts.map(p => <Post message={p.message} likesCount={p.likesCount} />);
 
-    return (<div className={p.postsBlock}>
+    return (
+        <div className={p.postsBlock}>
         <h3>My post</h3>
         <div>
             <div>

@@ -6,18 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import state from "./redux/state";
 
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <App
-            posts={state.profilePage.posts}
-            dialogs={state.dialogsPage.dialogs}
-            messages={state.dialogsPage.messages} />
+        <App state={state}/>
     </React.StrictMode>
 );
-
-
 
 
 reportWebVitals();
