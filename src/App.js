@@ -18,7 +18,7 @@ const App = (props) => {
                 <Navbar/>
                 <div className='app-wrapper-content'>
                     <Routes>
-                        <Route path="/dialogs" element={<Dialogs state={props.state.dialogsPage}/>}/>
+                        <Route path="/dialogs" element={<Dialogs store={props.store}/>}/>
                         <Route path="/profile" element={<Profile state={props.state.profilePage}/>}/>
                         <Route path="/news" element={<News/>}/>
                         <Route path="/music/" element={<Music/>}/>
@@ -30,9 +30,7 @@ const App = (props) => {
                             <Profile
                                 state={props.state.profilePage}
                                 newPostText={props.profilePage.newPostText}
-                                addPost={props.addPost}
-                                updateNewPostText={props.updateNewPostText}
-                            />
+                                dispatch={props.dispatch}/>
                         }}/>
                         <Route path="/news" element={<News/>}/>
                         <Route path="/music" element={<Music/>}/>
